@@ -1,8 +1,8 @@
 # 二分查询
 # 针对的是有序,有序,有序数组(并且是升序,升序,升序)
 def binarySearch(List, target):
-    head, tail = 0, len(List)  # 左闭右开
-    while head < tail:
+    head, tail = 0, len(List) - 1
+    while head <= tail:
         mid = head + (tail - head) // 2  # 防止溢出的取中值法
         if List[mid] == target:
             return mid
@@ -30,7 +30,7 @@ def binarySearch1(grid, target):
 
 
 if __name__ == "__main__":
-    r = binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 7)
+    r = binarySearch([1], 1)
     print(r)
     grid = [
         [1, 4, 7, 11, 15],
