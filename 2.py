@@ -9,7 +9,7 @@ def binarySearch(List, target):
         if List[mid] < target:
             head = mid + 1  # 因为左边是闭区间,mid的值已经小于target,所以索引到mid+1
         else:
-            tail = mid  # 右边是开区间,mid的值大于target,索引等于mid,但是不包含mid的值
+            tail = mid - 1  # 右边是开区间,mid的值大于target,索引等于mid,但是不包含mid的值
     return -1
 
 
@@ -30,7 +30,7 @@ def binarySearch1(grid, target):
 
 
 if __name__ == "__main__":
-    r = binarySearch([1], 1)
+    r = binarySearch([1, 3], 2)
     print(r)
     grid = [
         [1, 4, 7, 11, 15],
