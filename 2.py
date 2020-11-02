@@ -7,9 +7,9 @@ def binarySearch(List, target):
         if List[mid] == target:
             return mid
         if List[mid] < target:
-            head = mid + 1  # 因为左边是闭区间,mid的值已经小于target,所以索引到mid+1
+            head = mid + 1
         else:
-            tail = mid - 1  # 右边是开区间,mid的值大于target,索引等于mid,但是不包含mid的值
+            tail = mid - 1
     return -1
 
 
