@@ -1,3 +1,4 @@
+# 求阴影面积
 class Solution:
     def maxArea(self, height: list) -> int:
         p, q = 0, len(height) - 1
